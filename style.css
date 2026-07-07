@@ -2,9 +2,8 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* This prevents horizontal scrolling/wobbling */
+    overflow-x: hidden; 
 }
-/* Font setup */
 
 @font-face {
     font-family: 'Quicksand Dash';
@@ -13,13 +12,12 @@ html, body {
     font-style: normal;
 }
 
-/* Now update your variables to use it */
 :root {
     --title-font: 'Quicksand Dash', sans-serif;
     --body-font: 'Apple Garamond', 'EB Garamond', 'Garamond', serif;
+    --theme-transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
-/* This ensures EVERY paragraph on the site uses your font */
 p {
     font-family: var(--body-font) !important; 
 }
@@ -32,7 +30,8 @@ body {
     font-family: var(--body-font);
     font-size: 1.1rem;
     line-height: 1.6;
-    scroll-behavior: smooth; /* This makes the "tabs" scroll smoothly */
+    scroll-behavior: smooth; 
+    transition: var(--theme-transition);
 }
 
 /* Titles */
@@ -53,6 +52,7 @@ nav {
     width: 90%;
     background: rgba(255, 255, 255, 0.95);
     z-index: 1000;
+    transition: var(--theme-transition), background-color 0.3s ease;
 }
 
 nav ul {
@@ -77,91 +77,96 @@ nav a:hover {
 section {
     padding: 120px 5% 60px 5%;
     min-height: 90vh;
-    border-bottom: 1px solid #f0f0f0; /* Subtle divider for minimalist look */
+    border-bottom: 1px solid #f0f0f0; 
+    transition: var(--theme-transition);
 }
+
 #about {
     padding: 120px 5%;
 }
 
-.about-container {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: justify;
-    text-justify: inter-word;
+h2 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+    text-align: center;
+
 }
 
-#about p {
-    font-family: var(--body-font);
-    font-size: 1.15rem;
-    line-height: 2;         /* Slightly increased for that airy feel */
-    margin-bottom: 2rem;    /* The wide spacing you asked for */
-    color: #222;
-    hyphens: auto;
-}
 h1 {
     font-size: 1.8rem;
     margin-bottom: 50px;
     text-align: center;
 }
 
-p {
-    max-width: 650px;
-    margin: 0 auto; 1.5 rem
-    text-align: left;
-    font-size: 1.15 rem;
+/* Text Containers */
+.about-container, .page-intro, .page-intro p {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: justify; /* CAMBIADO: Antes estaba en left, ahora justifica todo */
+    font-size: 1.15rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
-    color: #444
+    color: #444;
+    transition: var(--theme-transition);
 }
 
+/* Forzar el justificado específicamente en los párrafos de las intros */
+.page-intro p {
+    text-align: justify !important;
+}
+
+.about-container p, .page-intro p {
+    margin-bottom: 2rem;
+}
+
+.poetic-lines {
+    margin-bottom: 2.5rem;
+}
+
+/* Evitamos que las líneas poéticas se justifiquen para mantener su estética limpia */
+.poetic-lines p {
+    text-align: center !important;
+}
+
+/* Original Image Grids */
 .grid {
-    /* Instead of 'display: grid', we use 'columns' */
-    column-count: 2; /* Number of columns */
-    column-gap: 40px; /* Space between columns */
+    column-count: 2; 
+    column-gap: 40px; 
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .grid img {
     width: 100%;
-    height: auto; /* Respects the natural height of your photo */
+    height: auto; 
     display: block;
-    margin-bottom: 40px; /* Space between images vertically */
-    
-    /* Keep them static as you requested */
-    pointer-events: none;
+    margin-bottom: 40px; 
 }
 
-
-    .extra-space {
-    margin-top: 150px; /* Adjust this number to get the exact gap you want */
+.extra-space {
+    margin-top: 150px; 
 }
 
-
-/* The Container */
+/* Split Layout */
 .split-layout {
     display: flex;
-    align-items: center; /* Aligns text vertically with the middle of the photo */
-    gap: 80px;           /* Large minimalist gap between image and text */
+    align-items: center; 
+    gap: 80px;           
     max-width: 1100px;
-    margin: 100px auto;  /* Space above and below the split section */
+    margin: 100px auto;  
 }
 
-/* The Image Side */
 .split-image {
-    flex: 1;             /* Takes up 50% of the width */
+    flex: 1;             
 }
 
 .split-image img {
     width: 100%;
     height: auto;
-    pointer-events: none;
 }
 
-/* The Text Side */
 .split-text {
-    flex: 1;             /* Takes up the other 50% */
-    text-align: left;    /* Standard editorial look */
+    flex: 1;             
+    text-align: left;    
 }
 
 .split-text h3 {
@@ -172,88 +177,92 @@ p {
 
 .split-text p {
     font-family: var(--body-font);
-    text-align: justify; /* Matches your About section */
-    margin-bottom: 0;    /* Overrides the large bottom margin we set earlier */
-    margin-bottom: 2rem
+    text-align: justify; 
+    margin-bottom: 2rem;
 }
 
-
-/* The stage for our overlap */
+/* Overlap Container */
 .overlap-container {
     position: relative;
     max-width: 1000px;
     margin: 100px auto;
     display: flex;
     gap: 20px;
-    padding-bottom: 60px; /* Adds extra room at the bottom so the PNG doesn't get cut off */
+    padding-bottom: 60px; 
 }
 
-/* The two background images */
 .base-img {
     width: 50%;
     height: auto;
     display: block;
-    opacity: 0.9; /* Slightly faded so the PNG pops */
+    opacity: 0.9; 
 }
 
-/* The PNG that sits on top */
 .png-overlay {
     position: absolute;
-    width: 1000px;       /* Adjust size as needed */
+    width: 1000px;       
     height: auto;
-    
-   /* Position it in the lower half */
-    bottom: -30%;    /* 5% distance from the bottom edge of the container */
-    left: 50%;     /* Moves it to the horizontal center */
-    transform: translateX(-50%); /* Perfectly centers it horizontally */
-    
-    z-index: 10;        /* Ensures it stays on top of everything else */
+    bottom: -30%;    
+    left: 50%;     
+    transform: translateX(-50%); 
+    z-index: 10;        
     pointer-events: none;
 }
 
+/* Hero Section (About Cover) */
 .hero {
     width: 100%;
-    height: 100vh; /* This makes the header take up the full screen height */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* Space for the fixed navigation menu */
+    padding-top: 80px; 
+    transition: var(--theme-transition);
+}
+
+/* Ocultar dinámicamente la cabecera fuera de About */
+body.hide-hero .hero {
+    display: none !important;
 }
 
 .hero-title {
-    font-family: var(--title-font); /* Quicksand Dash */
-    font-size: 4rem; /* Makes your name the focus */
+    font-family: var(--title-font); 
+    font-size: 4rem; 
     letter-spacing: 8px;
     margin: 0;
 }
 
 .hero-subtitle {
-    font-family: var(--body-font); /* Apple Garamond */
+    font-family: var(--body-font); 
     font-style: italic;
     font-size: 1.2rem;
     color: #666;
     margin-top: 10px;
+    transition: var(--theme-transition);
 }
 
 .hero-image-container {
-    width: 80%; /* Limits width for a minimalist frame look */
+    width: 80%; 
     max-width: 900px;
-    height: 2000vh; /* Adjust how tall the main image is */
+    height: 60vh; 
     overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the photo fills the box elegantly */
+    object-fit: cover; 
     pointer-events: none;
 }
+
+/* Contact */
 #contact {
     padding: 150px 5%;
-    background-color: #fafafa; /* Very subtle grey to distinguish from the work sections */
+    background-color: #fafafa; 
     text-align: center;
+    transition: var(--theme-transition);
 }
 
 .contact-container {
@@ -276,7 +285,7 @@ p {
 }
 
 .contact-item {
-    font-family: var(--title-font); /* Quicksand Dash */
+    font-family: var(--title-font); 
     text-decoration: none;
     color: #000;
     font-size: 0.9rem;
@@ -284,9 +293,9 @@ p {
     text-transform: uppercase;
     position: relative;
     padding-bottom: 5px;
+    transition: var(--theme-transition);
 }
 
-/* Minimalist Underline Animation */
 .contact-item::after {
     content: '';
     position: absolute;
@@ -295,7 +304,7 @@ p {
     bottom: 0;
     left: 0;
     background-color: #000;
-    transition: width 0.4s ease;
+    transition: width 0.4s ease, background-color 0.5s ease;
 }
 
 .contact-item:hover::after {
@@ -308,74 +317,139 @@ p {
     font-size: 0.9rem;
     color: #888;
     margin-top: 100px;
+    transition: var(--theme-transition);
 }
 
-/* --- UPDATED MOBILE MEDIA QUERY --- */
+/* --- MODO NOCHE GLOBAL ESTRICTO (Para la sección Shooting) --- */
+body.night-mode {
+    background-color: #222323 !important; /* Gris oscuro mineral */
+    color: #ebebeb !important;            /* Blanco roto suave */
+}
+
+body.night-mode nav {
+    background: rgba(45, 46, 46, 0.92) !important; /* Menú flotante claro con opacidad */
+    border-bottom: 1px solid #383939;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.night-mode nav a,
+body.night-mode .logo {
+    color: #ebebeb !important;
+}
+
+body.night-mode nav a:hover {
+    color: #b0b0b0 !important;
+}
+
+body.night-mode nav ul li.has-dropdown .dropdown {
+    background: #2d2e2e !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode nav ul li.has-dropdown .dropdown li a:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.night-mode .hero {
+    background-color: #222323 !important;
+}
+
+body.night-mode .hero-subtitle {
+    color: #b0b0b0 !important;
+}
+
+body.night-mode section {
+    border-bottom: 1px solid #383939 !important;
+}
+
+body.night-mode .page-intro, 
+body.night-mode .page-intro p,
+body.night-mode .intro-subtitle {
+    color: #d1d1d1 !important;
+}
+
+body.night-mode #contact {
+    background-color: #1a1b1b !important;
+}
+
+body.night-mode .contact-item {
+    color: #ebebeb !important;
+}
+
+body.night-mode .contact-item::after {
+    background-color: #ebebeb !important;
+}
+
+body.night-mode .location-stamp {
+    color: #7d7e7e !important;
+}
+
+/* --- RESPONSIVE / MEDIA QUERY --- */
 @media (max-width: 768px) {
-    /* 1. Global Reset for Mobile Spacing */
     section {
-        padding: 60px 5% 30px 5% !important; /* Reduces huge top/bottom gaps */
-        min-height: auto !important;          /* Prevents sections from feeling "empty" */
+        padding: 60px 5% 30px 5% !important; 
+        min-height: auto !important;          
     }
 
     #about {
         padding: 60px 5% !important;
     }
 
-    p, #about p, .split-text p {
+    p, #about p, .split-text p, .about-container, .page-intro, .page-intro p {
         font-size: 1rem;
         line-height: 1.6;
-        margin-bottom: 1.2rem; /* Tighter paragraph spacing */
+        margin-bottom: 1.2rem; 
     }
 
-    /* 2. The Header/Navigation Bar */
     nav {
         width: 100%;
         left: 0;
-        box-sizing: border-box; /* Critical: keeps padding inside the 100% width */
+        box-sizing: border-box; 
         padding: 10px 15px;
         height: auto;
         min-height: 60px;
         display: flex;
-        justify-content: center; /* Centers the whole nav content */
+        justify-content: center; 
         background: rgba(255, 255, 255, 0.98);
+    }
+
+    nav .logo {
+        font-size: 0.85rem !important; 
+        letter-spacing: 1px !important;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+
+    body.night-mode nav {
+        background: rgba(45, 46, 46, 0.98) !important;
     }
 
     nav ul {
         display: flex;
-        flex-direction: row;    /* Keeps links horizontal */
-        flex-wrap: wrap;        /* Allows links to wrap if they get too crowded */
+        flex-direction: row;    
+        flex-wrap: wrap;        
         justify-content: center;
-        gap: 12px;              /* Tightens space between menu items */
+        gap: 12px;              
         padding: 0;
         margin: 0;
         list-style: none;
     }
 
-    nav li {
-        margin: 0;
-    }
-
     nav a {
-        font-size: 0.65rem;     /* Slightly smaller for small screens */
+        font-size: 0.65rem;     
         letter-spacing: 1px;
-        white-space: nowrap;    /* Prevents single words from breaking */
+        white-space: nowrap;    
     }
 
-    /* 3. Hero Section Adjustments */
     .hero {
         padding-top: 100px; 
-        height: auto;           /* Let content define height instead of 100vh */
+        height: auto;           
         min-height: 60vh;
     }
 
-    .hero-content {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     .hero-title {
-        font-size: 1.5rem !important; /* Smaller to avoid screen overflow */
+        font-size: 1.5rem !important; 
         letter-spacing: 2px !important;
     }
 
@@ -385,11 +459,10 @@ p {
 
     .hero-image-container {
         width: 90%;
-        height: 35vh; /* Much shorter on mobile to avoid endless scrolling */
+        height: 35vh; 
         margin: 0 auto;
     }
 
-    /* 4. Layout Fixes (Grid, Split, Overlap) */
     .grid {
         column-count: 1;
         column-gap: 0;
@@ -413,15 +486,368 @@ p {
     }
 
     .base-img {
-        width: 100%; /* Background images stack vertically */
+        width: 100%; 
     }
 
     .png-overlay {
-        position: relative; /* Removes overlap on mobile for better visibility */
+        position: relative; 
         width: 80%;
         bottom: 0;
         left: 0;
         transform: none;
-        margin: -20px auto 0; /* Slight pull-up for a controlled overlap effect */
+        margin: -20px auto 0; 
     }
+
+    
+    h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 15px !important;
+        letter-spacing: 1px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* NUEVO: Reduce sutilmente el subtítulo para equilibrar la composición */
+    h1 {
+        font-size: 1.1rem !important;
+        margin-bottom: 30px !important;
+        letter-spacing: 1px !important;
+    }
+    
+    main.pages .page {
+        padding-top: 110px !important; /* Ajusta este valor si necesitas un poco más o menos de separación */
+    }
+
+}
+
+/* --- SISTEMA DE DESPLEGABLES --- */
+nav ul li.has-dropdown {
+  position: relative;
+}
+
+nav ul li.has-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el desplegable respecto al botón */
+  min-width: 160px;
+  background: #ffffff;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+nav ul li.has-dropdown .dropdown li {
+  display: block;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li.has-dropdown .dropdown li a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  white-space: nowrap;
+  font-size: 0.8rem; /* Tamaño de letra controlado para escritorio */
+}
+
+nav ul li.has-dropdown .dropdown li a:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 769px) {
+  nav ul li.has-dropdown:hover .dropdown {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li.has-dropdown .dropdown {
+    position: absolute; /* CORREGIDO: Ahora flota sobre la web en vez de empujar el menú */
+    top: 120%; /* Deja una separación limpia debajo del texto */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 4px 0;
+    min-width: 130px; /* Tamaño más compacto para móviles */
+  }
+
+  body.night-mode nav ul li.has-dropdown .dropdown {
+    background: #2d2e2e !important; /* Mantiene color del modo noche */
+  }
+
+  nav ul li.has-dropdown .dropdown li a {
+    font-size: 0.65rem !important; /* CORREGIDO: Misma medida exacta que el menú superior */
+    padding: 0.5rem 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  nav ul li.has-dropdown.open .dropdown {
+    display: block; /* Muestra el bloque flotante al pulsar */
+  }
+}
+@media (min-width: 769px) {
+  nav ul li.has-dropdown:hover .dropdown {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li.has-dropdown .dropdown {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+    display: none;
+  }
+  nav ul li.has-dropdown.open .dropdown {
+    display: block;
+  }
+}
+
+main.pages .page {
+  display: none;
+}
+
+main.pages .page.active {
+  display: block;
+}
+
+/* --- GRID DE MAQUETACIÓN AVANZADA --- */
+.page.gallery img {
+    cursor: zoom-in;
+    opacity: 1 !important;
+    filter: none !important;
+    transition: transform 0.3s ease;
+}
+
+.grid-full-width-container {
+    display: grid !important;
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px) !important;
+    margin: 0 auto 40px auto !important;
+    gap: 10px !important;
+}
+
+.grid-full-width-container img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+}
+
+.grid-4-columns { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+.grid-3-columns { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.grid-2-columns { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+.single-image-full-width {
+    width: calc(100% - 20px) !important;
+    margin: 0 auto 40px auto !important;
+    display: block !important;
+}
+
+.single-image-full-width img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.shooting-full-width {
+    width: calc(100% - 10px) !important;
+    max-width: calc(100% - 10px) !important;
+    gap: 5px !important;
+}
+
+@media (max-width: 768px) {
+    .grid-full-width-container {
+        width: calc(100% - 10px) !important;
+        max-width: calc(100% - 10px) !important;
+        gap: 6px !important;
+    }
+    .single-image-full-width { width: calc(100% - 10px) !important; }
+    .shooting-full-width {
+        width: calc(100% - 6px) !important;
+        max-width: calc(100% - 6px) !important;
+        gap: 3px !important;
+    }
+    .grid-4-columns { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* --- LIGHTBOX & ZOOM INTERACTIVO --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    /* Nueva transición para el fondo del lightbox */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Estado activo para el fundido en negro */
+.lightbox.active {
+    opacity: 1;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    cursor: zoom-in;
+    
+    /* Transición inicial para la apertura */
+    opacity: 0;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease; 
+}
+
+/* Estado cuando la imagen se muestra dentro del lightbox abierto (Sin Zoom) */
+.lightbox.active .lightbox-content {
+    opacity: 1;
+    transform: scale(1); /* Su tamaño idóneo dentro del 85vh de la pantalla */
+}
+
+/* MODIFICADO: Estado cuando el zoom con el ratón está activo */
+.lightbox-content.zoomed {
+    /* Mantenemos los límites de pantalla para que la escala funcione de forma controlada */
+    max-width: 90% !important;
+    max-height: 85vh !important;
+    cursor: zoom-out;
+    /* Transición ultra rápida para que el seguimiento panorámico del ratón sea fluido */
+    transition: transform 0.1s ease-out, opacity 0.2s ease;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active .close-lightbox {
+    opacity: 1;
+}
+
+.close-lightbox:hover {
+    color: #bbbbbb;
+}
+/* --- ANIMACIÓN DE TRANSICIÓN ENTRE PESTAÑAS --- */
+main.pages .page {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px); /* Pequeño desplazamiento inicial hacia abajo */
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Cuando la página está activa, se muestra y se anima */
+main.pages .page.active {
+  display: block;
+}
+
+/* Clase auxiliar para activar el desvanecimiento visual */
+main.pages .page.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Vuelve a su posición original */
+}
+/* --- SEPARADOR DE LOOKS EN SHOOTING --- */
+.shooting-separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    margin: 80px auto; /* Espacio de 80px arriba y abajo */
+    width: 60%;        /* No ocupa todo el ancho para que sea más elegante */
+}
+
+/* Adaptación del color de la barra fina para el modo noche */
+body.night-mode .shooting-separator {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+/* En móviles reducimos un poco el espacio para que no quede un hueco gigante */
+@media (max-width: 768px) {
+    .shooting-separator {
+        margin: 40px auto;
+        width: 80%;
+    }
+}
+/* Espaciado extra para el último párrafo antes del grid de diseños */
+.final-intro-paragraph {
+    margin-bottom: 60px !important; /* Aumenta o disminuye este valor si quieres más o menos separación */
+}
+
+/* En móviles lo reducimos un poco para que guarde la proporción de la pantalla */
+@media (max-width: 768px) {
+    .final-intro-paragraph {
+        margin-bottom: 40px !important;
+    }
+}
+
+/* Estilo reducido (tipo quote) para las líneas poéticas debajo del grid */
+.poetic-lines-small {
+    max-width: 600px; /* Ancho más estrecho para que tenga formato de cita corta */
+    margin: 40px auto 0 auto; 
+    text-align: center !important;
+}
+
+.poetic-lines-small p {
+    text-align: center !important;
+    font-style: italic;
+    font-size: 0.95rem; 
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Compatibilidad con el modo noche */
+body.night-mode .poetic-lines-small p {
+    color: #b0b0b0 !important;
+}
+/* 1. Asegurar la transición suave en el Hero */
+.hero {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh; /* Ajusta a la altura que tenga tu hero habitualmente */
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease, visibility 0.4s ease;
+    transform: translateY(0);
+    overflow: hidden;
+}
+
+/* 2. Comportamiento cuando se oculta el Hero (en las otras pestañas) */
+body.hide-hero .hero {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transform: translateY(-20px); /* Deslizamiento sutil hacia arriba al esconderse */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Asegurar que las páginas tengan su transición limpia en CSS */
+.page {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page.active.fade-in {
+    display: block; /* O flex/grid según tu diseño actual */
+    opacity: 1;
+    transform: translateY(0);
 }

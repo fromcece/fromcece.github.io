@@ -1,141 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="images/noulogocece.jpeg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carla Casademont</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/noulogocece.jpeg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carla Casademont</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <div class="logo"> Carla Casademont</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tailoring">Tailoring & Dressmaking</a></li>
-            <li><a href="#patternmaking">Patternmaking</a></li>
-            <li><a href="#embroidery">Embroidery</a></li>
-        </ul>
-    </nav>
+<nav id="main-nav">
+  <div class="logo"> Carla Casademont</div>
+  <ul>
+    <li><a href="#about" class="nav-link" data-target="about">About</a></li>
 
-    <header class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">CARLA CASADEMONT</h1>
-        <p class="hero-subtitle">Disseny, Patronatge i Confecció</p>
-    </div>
-    <div class="hero-image-container">
-        <img src="images/fotoabout.jpg" alt="Featured Work" class="hero-image">
-    </div>
+    <li class="has-dropdown">
+      <a href="#design-inspo" class="nav-link" data-target="design-inspo">Intrinsec</a>
+      <ul class="dropdown">
+        <li><a href="#design-inspo" data-target="design-inspo">Design & Inspo</a></li> 
+        <li><a href="#shooting" data-target="shooting">Shooting</a></li>
+        <li><a href="#tech-pack" data-target="tech-pack">Tech Pack</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#denim" class="nav-link" data-target="denim">Other Projects</a>
+      <ul class="dropdown">
+        <li><a href="#denim" data-target="denim">Denim Workshop</a></li>
+        <li><a href="#patternmaking" data-target="patternmaking">Patternmaking</a></li>
+        <li><a href="#embroidery" data-target="embroidery">Embroidery</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">CARLA CASADEMONT</h1>
+    <p class="hero-subtitle">Disseny, Patronatge i Confecció</p>
+  </div>
+  <div class="hero-image-container">
+    <img src="images/fotoabout.jpg" alt="Featured Work" class="hero-image">
+  </div>
 </header>
-    <section id="about">
+
+<main class="pages">
+
+  <!-- ABOUT -->
+  <section id="about" class="page active">
     <h1>About</h1>
-    
     <div class="about-container">
-        <p>
-            Having spent her youth surrounded by sparkly maillots, roller skates, and all kinds of crafting activities, Carla has always admired any and every type of manual labor. Although she took a long walk down the academic route, after graduating with a bachelor’s degree in Philosophy, she decided to return to her roots and pursue a career in the fashion industry, more specifically in behind-the-scenes work.
-        </p>
-
-        <p>
-            With that purpose in mind, she obtained a professional diploma in patternmaking and dressmaking while developing skills in embroidery and manual needlework. Her many years of competitive artistic roller skating, along with her perfectionist personality, shaped her into a rigorous, organized, and responsible individual. All these skills translate directly to the workplace, as she is meticulous, dynamic, and determined to overcome challenges. 
-        </p>
-
-        <p>
-            While her main focus lies in the construction and embellishment of garments, she also enjoys the creative process of designing (clothes, patterns, accessories...) as well as the calculated and focused art of patternmaking. Carla demonstrates a particular ability to observe and interpret the demands and requirements in place in every project, resolving those needs in her work.
-        </p>
-
-        <p>
-            This portfolio offers insight into herself and her work. She is excited to embark on her career and is eager to keep learning as much as possible.
-        </p>
+      <p>
+        Having spent her youth surrounded by sparkly maillots, roller skates, and all kinds of crafting activities, Carla has always admired any and every type of manual labor. Although she took a long walk down the academic route, after graduating with a bachelor’s degree in Philosophy, she decided to return to her roots and pursue a career in the fashion industry, more specifically in behind-the-scenes work.
+      </p>
+      <p>
+        With that purpose in mind, she obtained a professional diploma in patternmaking and dressmaking while developing skills in embroidery and manual needlework. Her many years of competitive artistic roller skating, along with her perfectionist personality, shaped her into a rigorous, organized, and responsible individual. All these skills translate directly to the workplace, as she is meticulous, dynamic, and determined to overcome challenges.
+      </p>
+      <p>
+        While her main focus lies in the construction and embellishment of garments, she also enjoys the creative process of designing (clothes, patterns, accessories...) as well as the calculated and focused art of patternmaking. Carla demonstrates a particular ability to observe and interpret the demands and requirements in place in every project, resolving those needs in her work.
+      </p>
+      <p>
+        This portfolio offers insight into herself and her work. She is excited to embark on her career and is eager to keep learning as much as possible.
+      </p>
     </div>
-</section>
+  </section>
 
-    <section id="tailoring" class="gallery">
-        <h1>Tailoring & Dressmaking</h1>
-        <div class="grid">
-            <img src="images/camisapantalocostatrec.jpg" alt="Tailoring work">
-            <img src="images/camisapantalodavantrec.jpg" alt="Tailoring work">
-            <img src="images/pantalodarrererec.jpg" alt="Tailoring work">
-            <img src="images/texanaibolso.jpg" alt="Tailoring work">
-        </div>
-
-        <div class="grid extra-space">
-            <img src="images/fitxamodel.png" alt="Tech pack">
-            <img src="images/stylesheet.png" alt="Tech pack">
-            <img src="images/sizesheet.png" alt="Tech pack">
-            <img src="images/constructionstepssheet.png" alt="Tech pack">
-        </div>
-    </section>
-
-    <section id="patternmaking" class="gallery">
-        <h1>Patternmaking</h1>
-        <div class="overlap-container">
-             <img src="images/corseartsyrec.jpg" class="base-img img-left" alt="Patrons corsé">
-             <img src="images/corseesquenarec.jpg" class="base-img img-right" alt="Patrons corsé">
-             
-             <img src="images/patronscorsemarro.png" class="png-overlay" alt="Technical Sketch">
-</div>
-        <div class="grid extra-space">
-            <img src="images/gabardinadavant.jpg" alt="Trench coat">
-            <img src="images/gabardinaesquena.jpg" alt="Trench coat">
-            <img src="images/gabardinacloseup.jpg" alt="Trench coat">
-            <img src="images/patronsgabardina.png" alt="Trench pattern">
-            <img src="images/dibuixgabardinapla.JPG" alt="Trench flats">
-        </div>
-        </div>
-    </section>
-
-    <section id="embroidery" class="gallery">
-        <h1>Embroidery</h1>
-        <div class="split-layout">
-    <div class="split-image">
-        <img src="images/brodatcadira.jpg" alt="Embroidery Detail">
-    </div>
-    <div class="split-text">
+  <!-- FINAL PROJECT: DESIGN & INSPO -->
+  <section id="design-inspo" class="page gallery">
+    <h2> Intrinsec: Graduate Collection </h2>
+    
+    <h1>Design & Inspiration</h1>
+    <div class="page-intro">
+       
         <p>
-            Inspired by my childhood in a coastal town, this embroidery project aimed to capture the gleaming aura of the sea in a creative and imaginative way, as if you were taking a look from the inside of a submarine.
+      This project represents the communion of the two main pillars of my life so far: philosophy, which gave me the tools to think about happiness; and sewing, which allowed me to make it tangible. 
         </p>
         <p>
-            With some non-conceptual elements and various marine creatures, I took this exercise as an opportunity to let my mind wander and work without a specific plan - something that is quite challenging for me. The preparation involved a light sketch of the main figures and the composition of a small colour palette. This way, I had some source to guide the creation process, but most of the filling elements, colours and beading work were decided on the go as I stitched.
+      Following a secondary theme present in the Thesis of my previous Bachelor's Degree in Philosophy - which examined anthropological materialism in Ludwig Feuerbach -, I took the concept of contraposition as the key point for exploration in design for my diploma's final collection. 
         </p>
         
+        <div class="poetic-lines">
+          <p style="text-align: center; font-style: italic; margin-bottom: 0.5rem;">No being exists without limit</p>
+          <p style="text-align: center; font-style: italic; margin-bottom: 0.5rem;">No life exists without misery, nor passion without suffering</p>
+          <p style="text-align: center; font-style: italic; margin-bottom: 0.5rem;">Life is intrinsically embedded to contraposition</p>
+        </div>
+
         <p>
-            Even though I had some prior experience with embroidery, this project truly deepened my passion for hand-stitching in general. I’m eager to continue learning and to experiment with all kinds of techniques.
+        The final idea was to express this tension, almost like a dance, between existence's opposite lines, which define it and keep it in perpetual evolution. To accomplish this goal, the twelve designs of the collection present a basic colour pallete that ranges from whites, blacks and the medium shadows. These contrasting pigments are separate in the beginning, but as the looks go on their independence becomes blurry. Also, to add a more passional and organic note, dashes of red and anatomical heart embroidery were included.In addition, the collection was focused on exploring textile manipulation, using smocking, patchwork and embroidery to further connect with these different stages of the thought process.
         </p>
+        <p>
+        At the same time, during the design process there was an intentional commitment to sustainability. I envisioned this collection to be created using mostly materials I already had in my possession from previous projects, upcycling and secondhand purchases, and if some fabrics had to be purchased new, they would have to be deadstock. This challenge was successfully fulfilled as the three looks patterned and sewn used ninety-five percent of materials that fit these characteristics.      
+        </p>
+
+     <p class="final-intro-paragraph">
+        Without further ado, the twelve designs that constitute "Intrínsec":
+      </p>
+  
     </div>
+    
+    <hr class="shooting-separator">
+
+    <div class="custom-grid grid-4-columns grid-full-width-container">
+      <img src="images/look1.jpg" alt="Design 1">
+      <img src="images/look2.jpg" alt="Design 2">
+      <img src="images/look3.jpg" alt="Design 3">
+      <img src="images/look4.jpg" alt="Design 4">
+      <img src="images/look5.jpg" alt="Design 5">
+      <img src="images/look6.jpg" alt="Design 6">
+      <img src="images/look7.jpg" alt="Design 7">
+      <img src="images/look8.jpg" alt="Design 8">
+      <img src="images/look9.jpg" alt="Design 9">
+      <img src="images/look10.jpg" alt="Design 10">
+      <img src="images/look11.jpg" alt="Design 11">
+      <img src="images/look12.jpg" alt="Design 12">
+    </div>
+
+    <hr class="shooting-separator">
+
+    <div class="poetic-lines-small">
+      <p>"Un ésser sense misèria és un ésser sense fonament.(...) 
+        L'únic mitjà per unir sense contradicció determinacions contraposades o contradictòries en un mateix ésser és el temps" </p>
+      <p>- Feuerbach, L. (Amengual, G. Ed.). (1984). Manifestos Antropològics. Laia.</p>
+    </div>
+  </section>
+
+  <!-- FINAL PROJECT: SHOOTING -->
+  <section id="shooting" class="page gallery">
+    <h1>Shooting</h1>
+    <div class="page-intro">
+      <p>
+      Out of the twelve designs that constitute the collection, three were chosen to be brought to life. All connected with each other to illustrate how darkness and light, logic and emotion, are both sides to the same coin: the human condition.
+      </p>
+    </div>
+   <hr class="shooting-separator">
+   
+    <!-- ====== BLOQUE LOOK 1 ====== -->
+    <div class="single-image-full-width shooting-full-width">
+        <img src="images/look1horizontal.jpg" alt="look1horizontal">
+    </div>
+    
+    <div class="page-intro">
+      <p>
+          This first look represents the structured, rational part of our being. Straight silhouette, seemingly controlled and solemn from the front, but when it turns, the smock loses some shape, then an open back is revealed. Body coming out of the shell, fabric moving at its own volition, expressing how, as much as one can desire to calculate every move and every occurrence, life has its way of escaping our schemes, for logic alone cannot rule our life.
+      </p>
+    </div>
+    
+    <div class="custom-grid grid-3-columns grid-full-width-container shooting-full-width">
+      <img src="images/look1first.jpg" alt="look 1 first">
+      <img src="images/look1second.jpg" alt="look 1 second">
+      <img src="images/look1third.jpg" alt="look 1 third">
+    </div>
+
+    <!-- BARRA SEPARADORA ENTRE LOOK 1 Y LOOK 2 -->
+    <hr class="shooting-separator">
+
+    <!-- ====== BLOQUE LOOK 2 ====== -->
+    <div class="single-image-full-width shooting-full-width">
+        <img src="images/look2horizontal.jpg" alt="look 2 horizontal">
+    </div>
+    
+    <div class="page-intro">
+      <p>
+        The second look evokes the irregular nature of passion. Colours and textures intertwine: hand-felted red wool, golden jacquard, black faux leather, sequins, taffeta... A corset that tightens the chest - as emotions and their contradictions so often do -  revealing an opening in the center front with a split black and white embroidery heart. Because, no matter how unmovable one tries to keep their passions, it is not always in our hand to control their ebb and flow.   
+      </p>
+    </div>
+    
+    <div class="custom-grid grid-3-columns grid-full-width-container shooting-full-width">
+      <img src="images/look2first.jpg" alt="look 2 first">
+      <img src="images/look2second.jpg" alt="look 2 second">
+      <img src="images/look2third.jpg" alt="look 2 third">
+    </div>
+
+    <!-- BARRA SEPARADORA ENTRE LOOK 2 Y LOOK 3 -->
+    <hr class="shooting-separator">
+
+    <!-- ====== BLOQUE LOOK 3 ====== -->
+    <div class="single-image-full-width shooting-full-width">
+        <img src="images/look3horizontal.jpg" alt="look 3 horizontal"> 
+    </div>
+    
+    <div class="page-intro">
+      <p>
+         The final look constitutes the pinnacle of this confrontation. On the one side, a simple black line, symmetrical in front and back, serene and at peace. On the other, a vibrant embroidered heart, almost beating on its own, held with the body through a string of almost rib-looking pearls. It is when the two entities finally find peace that the most harmonious piece can become. No half can sustain itself without the other, neither in life nor in the dress. 
+      </p>
+    </div>
+    
+    <div class="custom-grid grid-3-columns grid-full-width-container shooting-full-width">
+      <img src="images/look3first.jpg" alt="look 3 first">
+      <img src="images/look3second.jpg" alt="look 3 second">
+      <img src="images/look3third.jpg" alt="look 3 third">
+    </div>
+  </section>
+
+  <!-- FINAL PROJECT: TECH PACK -->
+  <section id="tech-pack" class="page gallery">
+    <h1>Tech Pack</h1>
+    <div class="page-intro">
+      <p>
+        This is an excerpt of the tech packs for the collection, this one being for the dress design.
+      </p>
+    </div>
+    <div class="custom-grid grid-2-columns grid-full-width-container">
+      <img src="images/fitxadisseny.jpg" alt=" Design sheet">
+      <img src="images/fitxamodel.jpg" alt="Style sheet">
+      <img src="images/fitxaindustrialitzacio.jpg" alt="Construction spec sheet">
+      <img src="images/fitxamesures.jpg" alt="Size sheet">
+      <img src="images/llistafases.jpg" alt="Step sheet">
+      <img src="images/fitxaclient.jpg" alt="Client sheet">
+      <img src="images/marcada.jpg" alt="Pattern placing">
+      <img src="images/escandall.jpg" alt="Cost sheet">
+    </div>
+  </section>
+
+  <!-- OTHER PROJECTS: DENIM WORKSHOP -->
+  <section id="denim" class="page gallery">
+    <h1>Denim workshop</h1>
+    <div class="grid">
+      <img src="images/camisapantalocostatrec.jpg" alt="Denim work">
+      <img src="images/camisapantalodavantrec.jpg" alt="Denim work">
+      <img src="images/pantalodarrererec.jpg" alt="Denim work">
+      <img src="images/texanaibolso.jpg" alt="Denim work">
+    </div>
+  </section>
+
+  <!-- OTHER PROJECTS: PATTERNMAKING -->
+  <section id="patternmaking" class="page gallery">
+    <h1>Patternmaking</h1>
+    <div class="overlap-container">
+      <img src="images/corseartsyrec.jpg" class="base-img img-left" alt="Patrons corsé">
+      <img src="images/corseesquenarec.jpg" class="base-img img-right" alt="Patrons corsé">
+      <img src="images/patronscorsemarro.png" class="png-overlay" alt="Technical Sketch">
+    </div>
+    <div class="grid extra-space">
+      <img src="images/gabardinadavant.jpg" alt="Trench coat">
+      <img src="images/gabardinaesquena.jpg" alt="Trench coat">
+      <img src="images/gabardinacloseup.jpg" alt="Trench coat">
+      <img src="images/patronsgabardina.png" alt="Trench pattern">
+      <img src="images/dibuixgabardinapla.JPG" alt="Trench flats">
+    </div>
+  </section>
+
+  <!-- OTHER PROJECTS: EMBROIDERY -->
+  <section id="embroidery" class="page gallery">
+    <h1>Embroidery</h1>
+    <div class="split-layout">
+      <div class="split-image">
+        <img src="images/brodatcadira.jpg" alt="Embroidery Detail">
+      </div>
+      <div class="split-text">
+        <p>
+          Inspired by my childhood in a coastal town, this embroidery project aimed to capture the gleaming aura of the sea in a creative and imaginative way, as if you were taking a look from the inside of a submarine.
+        </p>
+        <p>
+          With some non-conceptual elements and various marine creatures, I took this exercise as an opportunity to let my mind wander and work without a specific plan - something that is quite challenging for me. The preparation involved a light sketch of the main figures and the composition of a small colour palette. This way, I had some source to guide the creation process, but most of the filling elements, colours and beading work were decided on the go as I stitched.
+        </p>
+        <p>
+          Even though I had some prior experience with embroidery, this project truly deepened my passion for hand-stitching in general. I’m eager to continue learning and to experiment with all kinds of techniques.
+        </p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="grid">
+      <img src="images/brodatcloseupgeneral.jpg" alt="Brodat">
+      <img src="images/brodatdavantmirall.jpg" alt="Brodat">
+      <img src="images/brodatcloseup.jpg" alt="Brodat">
+      <img src="images/brodatproves.jpg" alt="Brodat">
+    </div>
+  </section>
+
+</main>
+
+<section id="contact">
+  <div class="contact-container">
+    <h1>Connect</h1>
+    <p class="contact-intro"> Available for projects and collaborations</p>
+    <div class="contact-links">
+      <a href="mailto:carlacperez10@gmail.com" class="contact-item">Email</a>
+      <a href="https://instagram.com/from.cece/" target="_blank" class="contact-item">Instagram</a>
+      <a href="https://linkedin.com/in/fromcece" target="_blank" class="contact-item">LinkedIn</a>
+    </div>
+    <div class="location-stamp">
+      <p>Based in Barcelona, Spain</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX HTML -->
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Zoomed View">
 </div>
 
-<div class="spacer"></div>
+<script>
+  const navLinks = document.querySelectorAll('[data-target]');
+  const pages = document.querySelectorAll('.page');
+  const navElement = document.querySelector('nav');
 
-    <div class="grid">
-        <img src="images/brodatcloseupgeneral.jpg" alt="Brodat">
-        <img src="images/brodatdavantmirall.jpg" alt="Brodat">
-        <img src="images/brodatcloseup.jpg" alt="Brodat">
-        <img src="images/brodatproves.jpg" alt="Brodat">
-    </div>
+function showPage(id) {
+    const targetSection = document.getElementById(id);
+    const activePage = document.querySelector('.page.active');
+    
+    document.querySelectorAll('.has-dropdown.open').forEach(function (li) {
+      li.classList.remove('open');
+    });
 
-    </section>
+    if (id === 'shooting') {
+      document.body.classList.add('night-mode');
+    } else {
+      document.body.classList.remove('night-mode');
+    }
 
-    <section id="contact">
-    <div class="contact-container">
-        <h1>Connect</h1>
-        <p class="contact-intro"> Available for projects and collaborations
-        <div class="contact-links">
-            <a href="mailto:carlacperez10@gmail.com" class="contact-item">Email</a>
-            <a href="https://instagram.com/from.cece/" target="_blank" class="contact-item">Instagram</a>
-            <a href="https://linkedin.com/in/fromcece" target="_blank" class="contact-item">LinkedIn</a>
-        </div>
+    if (id === 'about') {
+      document.body.classList.remove('hide-hero');
+    } else {
+      document.body.classList.add('hide-hero');
+    }
 
-        <div class="location-stamp">
-            <p>Based in Barcelona, Spain</p>
-        </div>
-    </div>
-</section>
+    // Si hay una página activa y es diferente a la que queremos ir
+    if (activePage && activePage.id !== id) {
+      // 1. Forzamos el desvanecimiento visual de la página actual
+      activePage.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      activePage.style.opacity = '0';
+      activePage.style.transform = 'translateY(10px)';
+      activePage.classList.remove('fade-in');
+      
+      setTimeout(function() {
+        // 2. Quitamos el estado activo a la anterior y se lo damos a la nueva
+        pages.forEach(function (page) {
+          page.classList.toggle('active', page.id === id);
+          // Limpiamos estilos inline viejos
+          page.style.opacity = '';
+          page.style.transform = '';
+        });
+
+        // 3. Gestionamos el scroll según la sección
+        if (id === 'about') {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        } else if (targetSection) {
+          const offsetTop = targetSection.offsetTop - navElement.offsetHeight;
+          window.scrollTo({ top: offsetTop, behavior: 'auto' });
+        }
+
+        // 4. Preparamos la nueva página con opacidad 0 antes de mostrarla
+        const newActivePage = document.getElementById(id);
+        if (newActivePage) {
+          newActivePage.style.opacity = '0';
+          newActivePage.style.transform = 'translateY(10px)';
+          newActivePage.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          
+          // 5. Forzamos la animación suave de entrada (aplica a todas, incluyendo About)
+          setTimeout(function() {
+            newActivePage.classList.add('fade-in');
+            newActivePage.style.opacity = '1';
+            newActivePage.style.transform = 'translateY(0)';
+          }, 50);
+        }
+
+      }, 200); // Espera a que termine de ocultarse la pestaña anterior
+    } else {
+      // Carga inicial o clic en la pestaña ya activa
+      pages.forEach(function (page) {
+        page.classList.toggle('active', page.id === id);
+      });
+      const currentSection = document.getElementById(id);
+      if (currentSection) {
+        currentSection.classList.add('fade-in');
+        currentSection.style.opacity = '1';
+        currentSection.style.transform = 'translateY(0)';
+      }
+    }
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      showPage(link.getAttribute('data-target'));
+      history.replaceState(null, '', '#' + link.getAttribute('data-target'));
+      
+      // NUEVO: Cierra los desplegables en móvil inmediatamente al pulsar una subpestaña
+      document.querySelectorAll('.has-dropdown.open').forEach(function (li) {
+        li.classList.remove('open');
+      });
+    });
+  });
+
+  document.querySelectorAll('.has-dropdown > .nav-link').forEach(function (trigger) {
+    trigger.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = trigger.parentElement;
+        const isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.has-dropdown').forEach(function (li) {
+          li.classList.remove('open');
+        });
+        if (!isOpen) parent.classList.add('open');
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      showPage(hash);
+    } else {
+      showPage('about');
+    }
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close-lightbox');
+  const galleryImages = document.querySelectorAll('.page.gallery img');
+
+  galleryImages.forEach(function(img) {
+    img.addEventListener('click', function() {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = this.src;
+      lightboxImg.classList.remove('zoomed');
+      
+      setTimeout(function() {
+        lightbox.classList.add('active');
+      }, 10);
+    });
+  });
+
+  lightboxImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+    
+    if (this.classList.contains('zoomed')) {
+      this.classList.remove('zoomed');
+      this.style.transform = 'none';
+    } else {
+      this.classList.add('zoomed');
+      ajustarPosicionZoom(e);
+    }
+  });
+
+  lightbox.addEventListener('mousemove', function(e) {
+    if (lightboxImg.classList.contains('zoomed')) {
+      ajustarPosicionZoom(e);
+    }
+  });
+
+ function ajustarPosicionZoom(e) {
+    const x = (e.clientX / window.innerWidth) * 100;
+    const y = (e.clientY / window.innerHeight) * 100;
+    lightboxImg.style.transformOrigin = `${x}% ${y}%`;
+    lightboxImg.style.transform = 'scale(2.5)';
+  }
+
+  function cerrarLightbox() {
+    lightbox.classList.remove('active');
+    setTimeout(function() {
+      lightbox.style.display = 'none';
+      lightboxImg.classList.remove('zoomed');
+      lightboxImg.style.transform = 'none';
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', cerrarLightbox);
+  
+  lightbox.addEventListener('click', function(e) {
+    if (e.target !== lightboxImg) {
+      cerrarLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      cerrarLightbox();
+    }
+  });
+</script>
+
 </body>
 </html>
